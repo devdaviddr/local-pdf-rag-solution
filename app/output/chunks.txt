@@ -1,0 +1,827 @@
+Chunk 1 (Page 0):
+Clinical Guideline No.:   CG251 
+ 
+ 
+ 
+ 
+ 
+Vancomycin Dosing and 
+Monitoring in Adults  
+Clinical Guideline 
+Version No.:  1.1 
+Approval date:  30/12/2019
+
+Chunk 2 (Page 1):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 2 of 14 
+ Public-I4-A2 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Disclaimer 
+This statewide guideline has been prepared to promote and facilitate standardisation and consistency of 
+practice, using a multidisciplinary approach. The guideline is based on a review of published evidence 
+and expert opinion.
+
+Chunk 3 (Page 1):
+and expert opinion. 
+Health practitioners in the South Australian public health sector are expected to review specific details of 
+each patient and professionally assess the applicability of the relevant guideline to that clinical situation.  
+If for good clinical reasons, a decision is made to depart from the guideline, the responsible clinician 
+must document in the patient’s medical record, the decision made, by whom and detailed reasons for the 
+departure from the guideline.
+
+Chunk 4 (Page 1):
+departure from the guideline. 
+This statewide guideline does not address all the elements of clinical practice and assumes that the 
+individual clinicians are responsible for: 
+• Discussing care with consumers in an environment that is culturally appropriate and which 
+enables respectful confidential discussion. This includes the use of interpreter services where 
+necessary; 
+• Advising consumers of their choice and ensure informed consent is obtained;
+
+Chunk 5 (Page 1):
+necessary; 
+• Advising consumers of their choice and ensure informed consent is obtained;  
+• Providing care within scope of practice, meeting all legislative requirements and maintaining 
+standards of professional conduct; and 
+• Documenting all care in accordance with mandatory and local requirements. 
+Information in this statewide guideline is current at the time of publication. SA Health does not accept
+
+Chunk 6 (Page 1):
+responsibility for the quality or accuracy of material on websites linked from this site and does not 
+sponsor, approve or endorse materials on such links.
+
+Chunk 7 (Page 2):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 3 of 14 
+ Public-I4-A2 
+ 
+Contents  
+ 
+1. Introduction ....................................................................................................................... 4 
+2. Background ....................................................................................................................... 4
+
+Chunk 8 (Page 2):
+3. Definitions and acronyms ................................................................................................ 4 
+4. Loading dose ..................................................................................................................... 5 
+5. Maintenance dose and dose adjustments ...................................................................... 5 
+6. Frequency of monitoring and dose adjustment ............................................................. 6
+
+Chunk 9 (Page 2):
+7. Target therapeutic range .................................................................................................. 6 
+8. Administration ................................................................................................................... 6 
+9. Special Considerations .................................................................................................... 7
+
+Chunk 10 (Page 2):
+Continuous infusions ........................................................................................................... 7 
+Red man syndrome ............................................................................................................. 7 
+Dosing in obesity ................................................................................................................. 8
+
+Chunk 11 (Page 2):
+Low body weight <50kg ....................................................................................................... 8 
+Haemodialysis ..................................................................................................................... 8 
+Continuous renal replacement therapies (CRRT) ............................................................... 8 
+10. Safety, quality and risk management .............................................................................. 9
+
+Chunk 12 (Page 2):
+11. Document Ownership & History .................................................................................... 11
+
+Chunk 13 (Page 3):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 4 of 14 
+ Public-I4-A2 
+ 
+     Vancomycin Dosing and Monitoring in Adults 
+1. Introduction 
+Vancomycin is a glycopeptide antibiotic. Intravenous formulations are used to treat infections with  
+Gram-positive bacteria and for surgical prophylaxis in some situations. 
+The SA Medicines Formulary restricts use of intravenous vancomycin to the following 
+indications in adults:
+
+Chunk 14 (Page 3):
+indications in adults: 
+> Infectious Diseases / Clinical Microbiology advice; or  
+> Intensive Care Units; or  
+> Haematology / Oncology as per febrile neutropenia guidelines; or  
+> Surgical prophylaxis as per statewide clinical guidelines for patients allergic to penicillin or at high risk 
+of methicillin-resistant Staphylococcus aureus (MRSA) infection; or  
+> Continuous Ambulatory Peritoneal Dialysis (CAPD) peritonitis involving MRSA and /or coagulase-
+negative staphylococcus (CoNS); or
+
+Chunk 15 (Page 3):
+negative staphylococcus (CoNS); or  
+> Empiric treatment of sepsis for 48 hours only (continuing therapy only with ID / Microbiology advice).  
+ 
+2. Background 
+Therapeutic drug monitoring is recommended for all patients treated with vancomycin for longer than 
+48 hours to avoid under-dosing. Monitoring is also important to minimise the risk of toxicity, especially in 
+patients with renal impairment (including those receiving renal replacement therapy).
+
+Chunk 16 (Page 3):
+patients with renal impairment (including those receiving renal replacement therapy).  
+Recent evidence has shown that the best determinant of vancomycin efficacy is the AUC/MIC  [1].  
+A 24-hour AUC/MIC of 400 or more is the target for clinical success [2, 3]. For practical reasons, a 
+trough (pre-dose) plasma concentration is used as a surrogate measure of efficacy.  
+ 
+3. Definitions and acronyms 
+ABW   Actual body weight
+
+Chunk 17 (Page 3):
+3. Definitions and acronyms 
+ABW   Actual body weight 
+AUC/MIC  Ratio of area under the curve (plasma concentration vs time) to minimum inhibitory 
+concentration (Units: mg.hr/Litre) 
+BMI   Body Mass Index = (Bodyweight in kilograms) / (height in meters)2  
+BSI   Blood stream infection/s 
+CAPD   Continuous ambulatory peritoneal dialysis 
+CNS   Central nervous system 
+CrCl  Creatinine Clearance 
+GFR   Glomerular filtration rate 
+ID/micro  Infectious diseases / Clinical microbiology
+
+Chunk 18 (Page 4):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 5 of 14 
+ Public-I4-A2 
+ 
+Low weight  Body weight < 50kg 
+MER  Medical Emergency Response 
+MET  Medical Emergency Team 
+MIC  Minimum inhibitory concentration 
+MRSA   Methicillin-resistant Staphylococcus aureus 
+NSQHS  National Safety and Quality Health Service Standards 
+Obese   BMI > 30kg/m2 
+PO  Orally 
+SAAGAR  South Australian SA expert Advisory Group on Antimicrobial Resistance
+
+Chunk 19 (Page 4):
+PO  Orally 
+SAAGAR  South Australian SA expert Advisory Group on Antimicrobial Resistance 
+SBP   Systolic blood pressure 
+TDM   Therapeutic drug monitoring 
+Trough level Serum vancomycin level taken towards the end of the dosing interval, approximately 
+one hour prior to next dose 
+ 
+4. Loading dose 
+Based on the currently available evidence, clinical data support a loading dose of 25mg / kg (actual body
+
+Chunk 20 (Page 4):
+weight) [3].  A loading dose will facilitate more rapid attainment of therapeutic target range [4]. Higher 
+loading doses may be required for critically ill patients (e.g. meningitis, sepsis, burns)  – consult ID/micro. 
+See table 1 in the Appendix for loading dose determination.  
+ 
+5. Maintenance dose and dose adjustments 
+Start maintenance dosing 12 hours after loading dose if CrCl more than/equal to 40mL/min, OR 24 hours
+
+Chunk 21 (Page 4):
+after loading dose if CrCl = 20-39 mL/min. If CrCl is less than 20mL/min check trough level 24 hours 
+after loading dose; wait for trough to fall below 20mg/L prior to re-dosing. 
+To estimate CrCl, use the Cockcroft-Gault equation (see table 5, Appendix). Do not use eGFR for 
+dosing.  
+Table 2  in the Appendix presents suggested maintenance dosing for patients within the weight range 
+between 40 & 120 kg, according to CrCl. Outside of this range, dosing based on actual body weight at
+
+Chunk 22 (Page 4):
+15 - 20 mg/kg per dose may be indicated (see under Special Considerations (Section 9) for information 
+on dosing in obesity or low body weight). The doses in Table 2 (Appendix) are for initial dosing, up to 
+48 hours; Subsequent dosage adjustments for intermittent infusions should be according to 
+recommendations in Table 3 (Appendix), and based on trough plasma concentrations.
+
+Chunk 23 (Page 5):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 6 of 14 
+ Public-I4-A2 
+ 
+6. Frequency of monitoring and dose adjustment 
+Therapeutic Drug Monitoring (TDM) is recommended for all patients treated with intravenous 
+vancomycin for more than 48 hours to reduce the risk of under-dosing and minimise the risk of toxicity. 
+The time of the first TDM (trough) will depend on the patient’s renal function and/or if renal function is
+
+Chunk 24 (Page 5):
+potentially unstable. 
+Trough monitoring 
+For patients with normal renal function, the first TDM (trough) should occur just prior (within one hour) 
+to the fourth dose (including the loading dose) or on day 3, whichever occurs earlier. In patients with 
+CrCl between 20-39 mL/min check trough level before (within one hour) of the third dose (including the 
+loading dose).  In changing renal function, earlier or more frequent TDM may be required. For patients
+
+Chunk 25 (Page 5):
+with CrCl less than 20mL/min or on peritoneal dialysis check trough level 24 hours after loading dose. 
+Repeat TDM trough (pre-dose) level every 3 days until levels are stable within the therapeutic range, and 
+at least once weekly thereafter [5, 6].  Unless stated in the Appendix Table 3 (i.e. CrCl less than 
+20mL/min), doses should NOT be routinely withheld pending trough level result. 
+Renal function monitoring
+
+Chunk 26 (Page 5):
+Renal function monitoring 
+Creatinine levels should be checked daily for the first 2 to 3 days of therapy, even if creatinine 
+levels are in the normal range. Measure serum creatinine twice weekly. For patients with unstable 
+renal function TDM should occur more frequently (possibly daily) to ensure toxicity is avoided.  
+ 
+7. Target therapeutic range 
+Target concentrations vary depending upon the disease, the MIC of the pathogen, and the mode of 
+administration [7]:
+
+Chunk 27 (Page 5):
+administration [7]:   
+• Intermittent infusion: Aim for trough levels of 15 - 20mg/L;  
+• Continuous infusion: Aim for blood levels of 20 - 25mg/L at steady state (36 – 48 hours after a 
+dose change). See under ‘Special considerations’ for further guidance on continuous infusions. 
+Due to its relatively large molecular weight, the penetration of vancomycin into the cerebrospinal fluid 
+from the IV route is variable and dependent upon the degree of meningeal inflammation [8]. Depending
+
+Chunk 28 (Page 5):
+upon the MIC of the pathogen, clinicians may aim for targets of 20 - 25mg/L to ensure sufficient CNS 
+concentrations [9]– for further information seek advice from Infectious Diseases / Clinical Microbiology/ 
+Clinical Pharmacist. 
+ 
+8. Administration  
+Doses of 1g should be administered over at least 60 minutes [10]. For higher doses the duration of 
+infusion should be extended by 30 minutes for each additional 500mg. This is recommended to reduce
+
+Chunk 29 (Page 5):
+infusion should be extended by 30 minutes for each additional 500mg. This is recommended to reduce 
+the risk of ‘red man syndrome’ [11]. The usual dilution is 5mg/mL. For fluid-restricted patients, 
+concentrations of up to 10mg/mL may be used. 
+Minimum recommended infusion durations are shown in Table 4 (Appendix),  adapted from Wilson & 
+Estes (eds), 2011 [12].
+
+Chunk 30 (Page 6):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 7 of 14 
+ Public-I4-A2 
+ 
+ 
+9. Special Considerations 
+Continuous infusions 
+Continuous infusion of vancomycin may be preferable in patients where the target range is difficult to 
+achieve via intermittent infusion, and may be necessary to maintain adequate blood levels in patients 
+with augmented renal function or obese patients[13]. It is currently unclear whether administering
+
+Chunk 31 (Page 6):
+with augmented renal function or obese patients[13]. It is currently unclear whether administering 
+vancomycin via continuous infusion is associated with less nephrotoxicity than intermittent infusions, as 
+the key correlating factor appears to be the steady-state vancomycin concentration [7, 14].  
+Switching from intermittent dosing to continuous infusion: For patients initiated on intermittent
+
+Chunk 32 (Page 6):
+Switching from intermittent dosing to continuous infusion: For patients initiated on intermittent 
+dosing and then switching to continuous infusion, the starting dose over 24 hours is the same as the total 
+dose for 24 hours administered via intermittent infusion [3]. The continuous infusion should be started 
+immediately after the last intermittent dose.  For patients being discharged and continuing treatment at
+
+Chunk 33 (Page 6):
+home, and with levels in the upper end of the target range (e.g. 20mg/L), local experts from SAAGAR 
+recommend a dose reduction of approximately 20% when converting from intermittent to 24- hour 
+continuous infusion. 
+Initiating vancomycin with continuous infusion: For critically ill patients initiated on continuous 
+infusion (and not initially treated with intermittent infusion), an initial loading dose is recommended
+
+Chunk 34 (Page 6):
+(Table 1, Appendix). If the patient is not critically ill, the initial dose is the same as an intermittent 
+maintenance dose (Table 2, Appendix). Continuous infusion is to be commenced immediately after the 
+completion of the loading dose – a level is not required at this point. The subsequent 24-hour continuous 
+infusion is the sum of the intermittent doses that would have been given over a 24 hour period, according 
+to the patient’s CrCl [9].
+
+Chunk 35 (Page 6):
+to the patient’s CrCl [9]. 
+For patients with normal renal function, steady-state concentration is reached after 36-48 hours. During 
+continuous infusions blood concentrations may be measured at any time of the day once steady-state is 
+achieved [15, 16]. In unstable patients, true steady state may never be achieved [16]. Levels may be 
+done earlier (e.g. 16 hours after infusion initiated) in critically ill patients to enable early identification of
+
+Chunk 36 (Page 6):
+sub-therapeutic levels.  Dosage adjustments are made in a simple linear manner [3]. Levels should be 
+monitored every 2-3 days, or more frequently if renal function is unstable, for example, in the ICU setting.   
+Red man syndrome 
+Red man syndrome is a common non-immunological reaction that can occur during or shortly after an 
+infusion of vancomycin and is related to the rate of infusion. For this reason, it is recommended that
+
+Chunk 37 (Page 6):
+vancomycin is infused no faster than 1g/hour [11]. The reaction is mediated by histamine release, which 
+can result in pruritus, flushing, erythematous rash (face, neck and upper thorax predominantly), fever, 
+chills and in severe cases angioedema and hypotension. These symptoms are due to non-specific mast 
+cell degranulation. True IgE-mediated allergy can occur but is rare.  
+If a patient experiences an infusion related reaction to vancomycin: 
+> Cease infusion
+
+Chunk 38 (Page 6):
+If a patient experiences an infusion related reaction to vancomycin: 
+> Cease infusion 
+> Administer antihistamine (cetirizine10mg PO) 
+> If newly hypotensive (SBP less than 90mmHg) initiate a call requesting emergency medical 
+assistance (i.e. MET or MER call). Consider giving adrenaline (epinephrine) if unable to do so.
+
+Chunk 39 (Page 7):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 8 of 14 
+ Public-I4-A2 
+ 
+> Consult clinical pharmacist or infectious diseases team for advice on recommencement of 
+vancomycin at a slower rate of infusion. Local experts from SA recommend doubling the time to 
+infuse the solution, or changing to a continuous infusion.  
+Dosing in obesity
+
+Chunk 40 (Page 7):
+infuse the solution, or changing to a continuous infusion.  
+Dosing in obesity 
+Obese patients are at higher risk of insufficient vancomycin concentrations leading to poorer clinical 
+outcomes [17]. The volume of distribution is larger in the obese population, protein binding may be 
+altered and clearance of vancomycin may also be greater.  
+Morbidly obese patients are excluded from most clinical trials therefore the evidence to guide dosing 
+regimens in these patients is not strong [4].
+
+Chunk 41 (Page 7):
+regimens in these patients is not strong [4].  
+Based on current clinical practice, the initial loading dose in obese patients should be as for non-obese 
+patients,  using actual body weight (at 25mg/kg) , (maximum 3 grams loading dose if CrCl is more than 
+or equal to60mL/min or 2.5g if CrCl is less than 60mL/min)  [3]. More frequent dosing (8-hourly) or a 
+continuous infusion may be preferred in obese patients [18]. Higher doses of more than 4g per day, such
+
+Chunk 42 (Page 7):
+as those often required in obese patients, are associated with a higher risk of nephrotoxicity [19, 20] . 
+Recommended maintenance dosing in obese adults is variable due to the differing pharmacokinetics 
+secondary to the extent of obesity and any pre-existing renal impairment, and should be guided by TDM. 
+Low body weight <50kg 
+Consider 15-20mg/kg 12-hourly maintenance dosing for patients less than 50kg, appropriately adjusting
+
+Chunk 43 (Page 7):
+the dose if the patient also has impaired renal function.  Loading doses less than 25mg/kg and less 
+frequent dosing may be appropriate in these patients [21]. Ongoing dosing should be guided by TDM.  
+Haemodialysis 
+Vancomycin dosing in adults undergoing intermittent haemodialysis is challenging due to a prolonged 
+distribution phase, a redistribution phase and rebound effect after completion of haemodialysis, patient
+
+Chunk 44 (Page 7):
+weight and residual renal function, and non-renal clearance [22]. Dialysis frequency also affects 
+maintenance dosing [23]. Loading doses are independent of renal function and should be based on 
+actual body weight (see table 1 in the Appendix). In most situations, levels should be done at t he 
+beginning of each haemodialysis session to guide further dosing. If levels are done post-dialysis, allow at 
+least four hours after the end of dialysis to allow for tissue redistribution [22].
+
+Chunk 45 (Page 7):
+least four hours after the end of dialysis to allow for tissue redistribution [22]. 
+Continuous renal replacement therapies (CRRT) 
+Vancomycin is effectively cleared by continuous renal replacement therapies, however the clearance 
+may be impacted by the type of CRRT chosen: continuous veno-venous haemofiltration (CVVH), 
+continuous veno-venous haemodialysis (CVVHD) and continuous veno-venous haemodiafiltation
+
+Chunk 46 (Page 7):
+continuous veno-venous haemodialysis (CVVHD) and continuous veno-venous haemodiafiltation 
+(CVVHDF) [24]. Clearance is closely related to the rate of ultrafiltrate / dialysate flow. Loading doses 
+based on ABW should be used in patients receiving CRRT (Table 1, Appendix). In fluid overloaded 
+patients, doses may require reduction as the volume of distribution is decreased [23]. In general, 
+administration of vancomycin by continuous infusion is preferred in patients on CRRT. Maintenance
+
+Chunk 47 (Page 7):
+administration of vancomycin by continuous infusion is preferred in patients on CRRT. Maintenance 
+dosing should be based on serum concentration monitoring [23].
+
+Chunk 48 (Page 8):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 9 of 14 
+ Public-I4-A2 
+ 
+10. Safety, quality and risk management 
+This guideline is in accordance with the following National Safety and Quality Health Service Standards  
+(NSQHSS): 
+National Safety and Quality Health Service Standards 
+ 
+Standard 1.7: Set out, review and maintain the currency and effectiveness of, policies, procedures and 
+protocols;
+
+Chunk 49 (Page 8):
+protocols; 
+Standard 3.15:  Provides access to, and promotes the use of, current evidence-based Australian 
+therapeutic guidelines and resources on antimicrobial prescribing;  
+Standard 4:13 The health service organisation ensures that information and decision support tools for 
+medicines are available to clinicians.  
+References 
+1. Lodise, T.P., et al., Vancomycin exposure in patients with Methicillin-Resistant Staphylococcus
+
+Chunk 50 (Page 8):
+1. Lodise, T.P., et al., Vancomycin exposure in patients with Methicillin-Resistant Staphylococcus 
+aureus Bloodstream Infections: How Much Is Enough? Clinical Infectious Diseases, 2014. 59(5): 
+p. 666-675. 
+2. Men, P., et al., Association between the AUC0-24/MIC ratio of vancomycin and its clinical 
+effectiveness: a systematic review and meta-analysis. PLOS ONE, 2016. 11(1): p. e0146224. 
+doi:10.1371/journal.pone.0146224.
+
+Chunk 51 (Page 8):
+doi:10.1371/journal.pone.0146224. 
+3. Antibiotic Expert Groups, Therapeutic Guidelines:  Antibiotic (version 16). 2019: Melbourne. 
+4. Reardon, J., T.T.Y. Lau, and M.H.H. Ensom, Vancomycin Loading Doses: A Systematic Revi ew. 
+Annals of Pharmacotherapy, 2015. 49(5): p. 557-565. 
+5. Rybak, M.J., et al., Vancomycin Therapeutic Guidelines: A Summary of Consensus 
+Recommendations from the Infectious Diseases Society of America, the American Society of
+
+Chunk 52 (Page 8):
+Recommendations from the Infectious Diseases Society of America, the American Society of 
+Health-System Pharmacists, and the Society of Infectious Diseases Pharmacists.  Clinical 
+Infectious Diseases, 2009. 49(3): p. 325-327. 
+6. Rybak, M.J., et al., Therapeutic monitoring of vancomycin in adult patients: A consensus review 
+of the American Society of Health-System Pharmacists, the Infectious Diseases Society of
+
+Chunk 53 (Page 8):
+of the American Society of Health-System Pharmacists, the Infectious Diseases Society of 
+America, and the Society of Infectious Diseases Pharmacists. Am J Health-Syst Pharm., 2009. 
+66: p. 82-98. 
+7. Gyssens, I. and N. Holmes, Vancomycin, in Kucers' The Use of Antibiotics (7th edition), M.L. 
+Grayson, Editor. 2018, CRC Press, : Boca Raton, Florida. p. 569-600. 
+8. Ricard, J., et al., Levels of vancomycin in cerebrospinal fluid of adult patients receiving
+
+Chunk 54 (Page 8):
+8. Ricard, J., et al., Levels of vancomycin in cerebrospinal fluid of adult patients receiving 
+adjunctive corticosteroids to treat pneumococcal meningitis: a prospective multicenter 
+observational study Clin Inf Dis, 2007. 44(2): p. 250-5. 
+9. Antibiotic Expert Group, Therapeutic Guidelines: Antibiotic (version 16). 2019: Melbourne. 
+10. Society of Hospital Pharmacists of Australia, Australian Injectable Drugs Handbook (7th ed). 
+2019. 
+ 
+ 
+National 
+Standard 1 
+ 
+Clinical 
+Governance
+
+Chunk 55 (Page 8):
+2019. 
+ 
+ 
+National 
+Standard 1 
+ 
+Clinical 
+Governance 
+ 
+ 
+National 
+Standard 2 
+ 
+Partnering with 
+Consumers 
+ 
+ 
+National 
+Standard 3 
+ 
+Preventing & 
+Controlling 
+Healthcare- 
+Associated 
+Infection 
+ 
+ 
+National 
+Standard 4 
+ 
+Medication 
+Safety 
+ 
+ 
+ 
+ 
+National 
+Standard 5 
+ 
+Comprehensiv
+e Care 
+ 
+ 
+National 
+Standard 6 
+ 
+Communica
+ting for 
+Safety 
+ 
+ 
+National 
+Standard 7 
+ 
+Blood 
+Management 
+ 
+ 
+National 
+Standard 8 
+ 
+Recognising & 
+Responding to 
+Acute 
+Deterioration
+
+Chunk 56 (Page 8):
+Blood 
+Management 
+ 
+ 
+National 
+Standard 8 
+ 
+Recognising & 
+Responding to 
+Acute 
+Deterioration 
+☒ ☐ ☒ ☒ ☐ ☐ ☐ ☐
+
+Chunk 57 (Page 9):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 10 of 14 
+ Public-I4-A2 
+ 
+11. Martel, T., R. Jamil, and K. King, Red Man Sydrome (review), in StatPearls [Online publication]. 
+2019, StatPearls Publiching LLC: https://www-ncbi-nlm-nih-
+gov.proxy.library.adelaide.edu.au/books/NBK482506/. 
+12. Vancomycin Adult Dosing and Monitoring Quick Guide, in Mayo Clinic Antimicrobial Therapy,
+
+Chunk 58 (Page 9):
+12. Vancomycin Adult Dosing and Monitoring Quick Guide, in Mayo Clinic Antimicrobial Therapy, 
+J.W. Wilson and L.L. Estes, Editors. 2011, Mayo Clinic Scientific Press Oxford University Press. 
+p. 43-47. 
+13. Waineo, M., T. Kuhn, and D. Brown, The pharmacokinetic/pharmacodynamic rationale for 
+administering vancomycin via continuous infusion J Clin Pharm Ther, 2015. 40 : p. 259-65. 
+14. Echeverria-Esnal, D., et al., Can we guarantee less nephrotoxicity when vancomycin is
+
+Chunk 59 (Page 9):
+14. Echeverria-Esnal, D., et al., Can we guarantee less nephrotoxicity when vancomycin is 
+administered by continuous infusion? . Int J Antimicrob Ag, 2016. 48: p. 116-7. 
+15. Drennan, P., et al., The dosing and monitoring of vancomycin: what is the best way forward? Int 
+J Antimicrob Agents, 2019. 53: p. 401-7. 
+16. Roberts, J.A., et al., Vancomycin Dosing in Critically Ill Patients: Robust Methods for Improved
+
+Chunk 60 (Page 9):
+Continuous-Infusion Regimens. Antimicrobial Agents and Chemotherapy, 2011. 55(6): p. 2704-
+2709. 
+17. Hall, R., et al., Multicenter evaluation of vancomycin dosing: Emphasis on obesity. Am J Med, 
+2008. 1221: p. 515-8. 
+18. AMH, Australian Medicines Handbook, ed. S. Rossi. 2018, Adelaide: Australian Medicines 
+Handbook Pty Ltd. 
+19. Hong, J., et al., Individualized Vancomycin Dosing in Obese Patients: A Two- Sample
+
+Chunk 61 (Page 9):
+19. Hong, J., et al., Individualized Vancomycin Dosing in Obese Patients: A Two- Sample 
+Measurement Approach Improves Target Attainment. Pharmacotherapy, 2015. 35(5): p. 455-
+463. 
+20. Lodise, T.P., et al., Larger Vancomycin Doses (at Least Four Grams per Day) Are Associated 
+with an Increased Incidence of Nephrotoxcity. Antimicrobial Agents and Chemotherapy, 2008. 
+52(4). 
+21. Lomaestro, B.M., Vancomycin Dosing and Monitoring 2 Years After the Guidelines.  Expert
+
+Chunk 62 (Page 9):
+21. Lomaestro, B.M., Vancomycin Dosing and Monitoring 2 Years After the Guidelines.  Expert 
+Review of Anti-infective Therapy, 2011. 9(6): p. 657-667. 
+22. Crew, P., S. Heintz, and B. Heintz, Vancomycin dosing and monitoring for patients with end-
+stage renal disease receiving intermittent hemodialysis Am J Health Syst Pharm, 2015. 72: p. 
+1856-64. 
+23. Rybak, M., et al., Therapeutic monitoring of vancomycin: A revised consensus guideline and
+
+Chunk 63 (Page 9):
+23. Rybak, M., et al., Therapeutic monitoring of vancomycin: A revised consensus guideline and 
+review of the American Society of health-System Pharmacists, the Infectious Diseases Society 
+of America, the Pediatric Infectious Diseases Society and the Society of Infectious Diseases 
+Pharmacists (draft). 2019: https://www.ashp.org/-/media/assets/policy-guidelines/docs/draft-
+guidelines/draft-guidelines-ASHP-IDSA-PIDS-SIDP-therapeutic-
+
+Chunk 64 (Page 9):
+guidelines/draft-guidelines-ASHP-IDSA-PIDS-SIDP-therapeutic-
+vancomycin.ashx?la=en&hash=8126CEE49F401CDEE5DB49712225F0A4518DB94B&fbclid=Iw
+AR0tgq_SfaBvgdRLOeb-y1umK2P2ROLwnJ-RMzSoY5iFSTVn-FeAhfSonoA [Accessed 06 Nov 
+2019]. 
+24. Deldot, M., J. Lipman, and S. Tett, Vancomycin pharmacokinetics in critically ill patients 
+receiving continuous venovenous haemodiafiltration. Br J Clin Pharmacol, 2004. 58(3): p. 259-
+68.
+
+Chunk 65 (Page 9):
+receiving continuous venovenous haemodiafiltration. Br J Clin Pharmacol, 2004. 58(3): p. 259-
+68. 
+25. Deresinski, S., Vancomycin Loading Dose—Is it Safe?  Clinical Infectious Diseases, 2016. 63(1): 
+p. 3-4. 
+26. Rosini, J., et al., High Single-dose Vancomycin Loading Is Not Associated With Increased 
+Nephrotoxicity in Emergency Department Sepsis Patients. Academic Emergency Medicine, 
+2016. 23: p. 744-746.
+
+Chunk 66 (Page 9):
+2016. 23: p. 744-746. 
+27. Rosini, J., et al., A Randomized Trial of Loading Vancomycin in the Emergency Department. 
+Annals of Pharmacotherapy, 2015. 49(1): p. 6-13.
+
+Chunk 67 (Page 10):
+INFORMAL COPY WHEN PRINTED         Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 11 of 14 
+ Public-I4-A2 
+ 
+11. Document Ownership & History 
+Approval 
+Date Version Who approved New/Revised 
+Version Reason for Change 
+30/12/2019  V1.1 Director, Communicable Disease 
+Control Branch 
+Minor alteration and put in the new 
+template. 
+06/12/2016  V1.0 SA Health Safety & Quality Strategic 
+Governance Committee Original approved version.
+
+Chunk 68 (Page 10):
+Governance Committee Original approved version. 
+ 
+  
+Document developed by:  South Australian expert Advisory Group on Antimicrobial 
+Resistance (SAAGAR), Infection Control Service 
+File / Objective No.: 2016-03304 | A1830235 
+Next review due:  05/12/2022  
+Policy history: Is this a new policy?  N 
+ Does this policy amend or update and existing policy?   Y 
+ If so, which version? 1.0 
+ Does this policy replace another policy with a different title?  N 
+ISBN No.:  978-1-76083-222-3
+
+Chunk 69 (Page 11):
+Appendix: VANCOMYCIN DOSING AND MONITORING IN ADULTS CLINICAL GUIDELINE 
+ Public-I4-A2 
+Table 1: Vancomycin loading dose determination 
+Actual body weight (kg) Loading dose (grams) 
+40-44kg 1g 
+45-54kg 1.25g 
+55-64kg 1.5g 
+65-79kg 2g 
+80-119kg or more than/equal to 120kg & CrCl less than 59ml/min 2.5g 
+More than / equal to 120kg and CrCl more than / equal to 60ml/min 3g* (maximum)
+
+Chunk 70 (Page 11):
+More than / equal to 120kg and CrCl more than / equal to 60ml/min 3g* (maximum) 
+* High loading doses recommended based on expert advice and current practice in Australia and evidence of safety [25-27]
+Table 2: Recommended initial maintenance dose (for up to 48 hours) 
+Creatinine clearance (mL/min)* 
+Actual body 
+weight (ABW) 
+See ID/micro advice if 
+Less than 40kg 
+Start maintenance dose 12 hours after loading dose (if giving 12-
+
+Chunk 71 (Page 11):
+Less than 40kg 
+Start maintenance dose 12 hours after loading dose (if giving 12-
+hourly) or 24 hours after the loading dose (if giving 24 hourly) 
+Check level 24 
+hours after 
+loading dose.  
+#Re-dose only 
+when level is 
+less than 20mg/L. 
+Repeat levels 
+every 1-2 days 
+CrCl more than 60 CrCl 40-59 CrCl 20-39 CrCl less than 20 
+or CAPD 
+40 – 49 kg 750mg 12-hourly 750mg 12-hourly 750mg 24-hourly 750mg# 
+50 – 64 kg 1g 12-hourly 750mg 12-hourly 1g 24-hourly 1g#
+
+Chunk 72 (Page 11):
+50 – 64 kg 1g 12-hourly 750mg 12-hourly 1g 24-hourly 1g# 
+65 – 78 kg 1.25g 12-hourly 1g 12-hourly 1.25g 24-hourly 1.25g# 
+79 – 92 kg 1.5g 12-hourly 1.25g 12-hourly 1.5g 24-hourly 1.5g# 
+93 – 107 kg 1.75g 12-hourly 1.25g 12-hourly 1.75g 24-hourly 1.75g# 
+More than 108 kg 2g 12-hourly 1.5g 12-hourly 2g 24-hourly 2g# 
+*Use the Cockcroft-Gault equation (Appendix 2) to calculate CrCl. Do not use eGFR as this is not accurate for extremes of body size.
+
+Chunk 73 (Page 11):
+Table 3: Dosage adjustment for intermittent infusions based on trough concentration 
+Creatinine clearance (mL/min) 
+CrCl more than 40 mL/min CrCl 20-39 CrCl less than 20 
+Timing of 
+vancomycin 
+level: 
+Check level before the fourth 
+dose (incl loading dose) 
+Check level before the 
+third dose (incl loading 
+dose) 
+Check level 
+24 hours after 
+loading dose* 
+Trough concentration 
+Less than 
+10 mg/L 
+Increase total daily dose by 1g 
+(Seek ID advice if daily dose  
+more than 4g/day)
+
+Chunk 74 (Page 11):
+10 mg/L 
+Increase total daily dose by 1g 
+(Seek ID advice if daily dose  
+more than 4g/day)   
+Increase total daily dose by 
+500mg 
+Re-dose when 
+trough less than 
+20mg/L 
+10 – 14 
+mg/L 
+Increase total daily dose by 
+500mg 
+Increase total daily dose by 
+250mg 
+15 – 20 
+mg/L 
+IN TARGET RANGE - no change required. 
+Repeat trough levels twice weekly if vancomycin levels and renal 
+function are stable.  If not, more frequent monitoring is suggested* 
+21 – 25 
+mg/L 
+Reduce each dose by 250mg
+
+Chunk 75 (Page 11):
+21 – 25 
+mg/L 
+Reduce each dose by 250mg 
+More than 
+25mg/L 
+Hold dose for 24 hours. 
+Re-check level and recommence at reduced dose when level 
+Less than 20mg/L. Review renal function 
+* Wait for result from lab before re-dosing, then re-dose according to doses recommended in Table 2. Dosing frequency is usually 48-72 hrly
+Additional dosing information: 
+• As a general rule, round doses to the nearest 250mg; Vial sizes available are 500mg or 1g.
+
+Chunk 76 (Page 11):
+• As a general rule, round doses to the nearest 250mg; Vial sizes available are 500mg or 1g.
+• Following a dose adjustment, vancomycin levels and serum creatinine should be ordered 36-48 hours after the new dose was started.
+• Doses of up to 1g should be administered over at least 60 minutes to avoid ‘red man syndrome’. For higher doses, the duration of
+infusion should be extended by 30 minutes for each additional 500mg.
+
+Chunk 77 (Page 11):
+infusion should be extended by 30 minutes for each additional 500mg.
+• For continuous infusions, aim for steady state (after 36 to 48 hours) levels of 20-25mg/L or as advised by ID/micro.
+
+Chunk 78 (Page 12):
+I
+NFORMAL COPY WHEN PRINTED    Vancomycin Dosing and Monitoring in Adults Clinical Guideline Page 13 of 14 
+ Public-I4-A2 
+T
+able 4: Intravenous infusion rate 
+Vancomycin Infusion Rate 
+Dose Recommended Infusion Duration 
+Less than / equal to 1 g 60 min 
+1.1 - 1.5 g 90 min 
+1.6 - 2.0 g 120 min 
+More than 2 g Infuse at approx. 1 g per hour 
+T
+able 5: Estimating CrCl using the Cockcroft-Gault equation 
+Ideal body weight estimation: 
+Feet & 
+inches Cm IBW (female) IBW (male) 
+5'1 155 48 53
+
+Chunk 79 (Page 12):
+Ideal body weight estimation: 
+Feet & 
+inches Cm IBW (female) IBW (male) 
+5'1 155 48 53 
+5'2 157 50 55 
+5'3 160 53 57 
+5'4 163 55 60 
+5'5 165 57 62 
+5'6 168 60 64 
+5'7 170 62 66 
+5'8 173 64 69 
+5'9 175 66 71 
+5'10 178 69 73 
+5'11 180 71 76 
+6'0 183 73 78 
+6'1 185 76 80 
+IBW (female) = 45.5kg + 0.9kg per cm over 152cm 
+IBW (male) = 50kg + 0.9kg per am over 152cm 
+*Use Actual Body Weight if this is LESS than IBW
+- If obese (ABW is ≥ 30% above IBW or BMI > 30kg/m2),
+c
+
+Chunk 80 (Page 12):
+- If obese (ABW is ≥ 30% above IBW or BMI > 30kg/m2),
+c
+onsider using adjusted body weight (AdjBW) to
+c
+alculate CrCl:
+      AdjBW = IBW + [0.4 x (ABW-IBW)] 
+CrCl (mL/min) = (140-age) x IBW (kg)* x0.85 (for females) 
+  0.815 x SeCr (micromol/L)
+
+Chunk 81 (Page 13):
+For more information 
+National Antimicrobial Utilisation Surveillance Program 
+Communicable Disease Control Branch 
+11 Hindmarsh Square 
+Adelaide SA 5000 
+Telephone: 1300 232 272 
+Email: HealthAntibio@sa.gov.au 
+www.sahealth.sa.gov.au/antimicrobials 
+Public-I4–A2 
+© Department for Health and Wellbeing, Government of South Australia. All rights reserved
+
