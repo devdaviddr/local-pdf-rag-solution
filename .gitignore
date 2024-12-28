@@ -1,3 +1,5 @@
 .venv/
 my_chroma_db/
 app/my_chroma_db/
+app/data/
+data/
