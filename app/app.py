@@ -11,7 +11,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 
 def split_pdf_to_text(pdf_path, chunk_size=1000, chunk_overlap=200):
     """
-    Load a PDF and split it into text chunks.
+    Load a PDF and split it into text chunks, including metadata like page number and document name.
     """
     try:
         # Load the PDF document
@@ -34,9 +34,17 @@ def split_pdf_to_text(pdf_path, chunk_size=1000, chunk_overlap=200):
     texts = text_splitter.split_documents(documents)
     logging.info(f"Split the PDF into {len(texts)} chunks.")
 
-    # Debug: Print the first chunk
+    # Add metadata (page number and document name) to each chunk
+    for text in texts:
+        if not hasattr(text, 'metadata'):
+            text.metadata = {}
+        text.metadata['source'] = pdf_path  # Document name (file path)
+        if 'page' not in text.metadata:  # Ensure page number is included
+            text.metadata['page'] = text.metadata.get('page', 'Unknown')
+
+    # Debug: Print the first chunk with metadata
     if texts:
-        logging.info(f"First chunk:\n{texts[0].page_content}\n")
+        logging.info(f"First chunk:\n{texts[0].page_content}\nMetadata: {texts[0].metadata}\n")
 
     return texts
 
