@@ -9,149 +9,140 @@ import ollama
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
-def split_pdf_to_text(pdf_path, chunk_size=1000, chunk_overlap=200):
-    """
-    Load a PDF and split it into text chunks, including metadata like page number and document name.
-    """
-    try:
-        # Load the PDF document
-        logging.info(f"Loading PDF: {pdf_path}")
-        loader = PyPDFLoader(pdf_path)
-        documents = loader.load()
-        logging.info(f"Loaded {len(documents)} pages from the PDF.")
-    except Exception as e:
-        logging.error(f"Error loading PDF: {e}")
-        return None
+class PDFProcessor:
+    """Handles loading and splitting PDF documents."""
 
-    # Initialize the text splitter
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size,
-        chunk_overlap=chunk_overlap,
-    )
+    def __init__(self, chunk_size=1000, chunk_overlap=200):
+        self.chunk_size = chunk_size
+        self.chunk_overlap = chunk_overlap
 
-    # Split the document into texts
-    logging.info("Splitting PDF into text chunks...")
-    texts = text_splitter.split_documents(documents)
-    logging.info(f"Split the PDF into {len(texts)} chunks.")
+    def split_pdf_to_text(self, pdf_path):
+        """Load a PDF and split it into text chunks, including metadata."""
+        try:
+            logging.info(f"Loading PDF: {pdf_path}")
+            loader = PyPDFLoader(pdf_path)
+            documents = loader.load()
+            logging.info(f"Loaded {len(documents)} pages from the PDF.")
+        except Exception as e:
+            logging.error(f"Error loading PDF: {e}")
+            return None
 
-    # Add metadata (page number and document name) to each chunk
-    for text in texts:
-        if not hasattr(text, 'metadata'):
-            text.metadata = {}
-        text.metadata['source'] = pdf_path  # Document name (file path)
-        if 'page' not in text.metadata:  # Ensure page number is included
-            text.metadata['page'] = text.metadata.get('page', 'Unknown')
-
-    # Debug: Print the first chunk with metadata
-    if texts:
-        logging.info(f"First chunk:\n{texts[0].page_content}\nMetadata: {texts[0].metadata}\n")
-
-    return texts
-
-def store_in_chromadb(texts, persist_directory="my_chroma_db"):
-    """
-    Generate embeddings and store the text chunks in ChromaDB.
-    """
-    try:
-        # Initialize the embedding model
-        logging.info("Initializing Hugging Face embedding model...")
-        embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")  # Lightweight embedding model
-
-        # Store the texts and embeddings in ChromaDB
-        logging.info("Storing text chunks in ChromaDB...")
-        db = Chroma.from_documents(texts, embeddings, persist_directory=persist_directory)
-        logging.info(f"Text chunks stored in ChromaDB at {persist_directory}")
-        return db
-    except Exception as e:
-        logging.error(f"Error storing in ChromaDB: {e}")
-        return None
-
-def query_chromadb(query, persist_directory="my_chroma_db", k=5):  # Increased k to 5
-    """
-    Query ChromaDB for relevant text chunks.
-    """
-    try:
-        # Initialize the embedding model
-        embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-
-        # Load ChromaDB
-        db = Chroma(persist_directory=persist_directory, embedding_function=embeddings)
-
-        # Retrieve relevant chunks
-        results = db.similarity_search(query, k=k)
-        logging.info(f"Retrieved {len(results)} relevant chunks from ChromaDB.")
-        
-        # Debug: Print the retrieved chunks
-        for i, chunk in enumerate(results):
-            logging.info(f"Chunk {i+1}:\n{chunk.page_content}\n")
-        
-        return results
-    except Exception as e:
-        logging.error(f"Error querying ChromaDB: {e}")
-        return None
-
-def generate_response_with_llama(query, relevant_chunks):
-    """
-    Generate a response using Llama 3 via Ollama.
-    """
-    try:
-        # Combine the query and relevant chunks into a prompt
-        context = "\n\n".join([chunk.page_content for chunk in relevant_chunks])
-        prompt = (
-            f"You are a helpful assistant. Use the following context to answer the question.\n"
-            f"Context:\n{context}\n\n"
-            f"Question: {query}\n"
-            f"Answer:"
+        text_splitter = RecursiveCharacterTextSplitter(
+            chunk_size=self.chunk_size,
+            chunk_overlap=self.chunk_overlap,
         )
 
-        # Generate the response using Llama 3
-        logging.info("Generating response with Llama 3...")
-        response = ollama.generate(model="llama3.2", prompt=prompt)  # Corrected model name
-        return response["response"]
-    except Exception as e:
-        logging.error(f"Error generating response with Llama 3: {e}")
-        return None
+        logging.info("Splitting PDF into text chunks...")
+        texts = text_splitter.split_documents(documents)
+        logging.info(f"Split the PDF into {len(texts)} chunks.")
 
-def main(pdf_path=None, persist_directory="my_chroma_db", chunk_size=1000, chunk_overlap=200):
-    """
-    Main function to handle embedding PDFs and querying ChromaDB with Llama 3.
-    """
-    if pdf_path:
-        # Step 1: Load the PDF and split it into chunks
-        texts = split_pdf_to_text(pdf_path, chunk_size, chunk_overlap)
-        if not texts:
-            logging.error("Failed to load or split the PDF. Exiting.")
-            return
+        for text in texts:
+            if not hasattr(text, 'metadata'):
+                text.metadata = {}
+            text.metadata['source'] = pdf_path
+            if 'page' not in text.metadata:
+                text.metadata['page'] = text.metadata.get('page', 'Unknown')
 
-        # Step 2: Store the chunks in ChromaDB
-        if not store_in_chromadb(texts, persist_directory):
-            logging.error("Failed to store chunks in ChromaDB. Exiting.")
-            return
+        if texts:
+            logging.info(f"First chunk:\n{texts[0].page_content}\nMetadata: {texts[0].metadata}\n")
 
-    # Step 3: Query ChromaDB and generate responses with Llama 3
-    logging.info("Starting RAG pipeline with ChromaDB and Llama 3.")
-    while True:
-        # Get user input
-        query = input("\nYou: ")
-        if query.lower() in ["exit", "quit"]:
-            logging.info("Exiting the RAG pipeline.")
-            break
+        return texts
 
-        # Step 4: Query ChromaDB for relevant chunks
-        relevant_chunks = query_chromadb(query, persist_directory)
-        if not relevant_chunks:
-            print("No relevant chunks found. Try a different query.")
-            continue
+class ChromaDBManager:
+    """Manages ChromaDB operations like storing and querying."""
 
-        # Step 5: Generate a response using Llama 3
-        response = generate_response_with_llama(query, relevant_chunks)
-        if response:
-            print(f"Assistant: {response}")
-        else:
-            print("Failed to generate a response. Please try again.")
+    def __init__(self, persist_directory="my_chroma_db"):
+        self.persist_directory = persist_directory
+        self.embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
-if __name__ == "__main__":
-    # Parse command-line arguments
+    def store_in_chromadb(self, texts):
+        """Store text chunks and embeddings in ChromaDB."""
+        try:
+            logging.info("Storing text chunks in ChromaDB...")
+            db = Chroma.from_documents(texts, self.embeddings, persist_directory=self.persist_directory)
+            logging.info(f"Text chunks stored in ChromaDB at {self.persist_directory}")
+            return db
+        except Exception as e:
+            logging.error(f"Error storing in ChromaDB: {e}")
+            return None
+
+    def query_chromadb(self, query, k=5):
+        """Query ChromaDB for relevant text chunks."""
+        try:
+            db = Chroma(persist_directory=self.persist_directory, embedding_function=self.embeddings)
+            results = db.similarity_search(query, k=k)
+            logging.info(f"Retrieved {len(results)} relevant chunks from ChromaDB.")
+            for i, chunk in enumerate(results):
+                logging.info(f"Chunk {i+1}:\n{chunk.page_content}\n")
+            return results
+        except Exception as e:
+            logging.error(f"Error querying ChromaDB: {e}")
+            return None
+
+class LLMResponseGenerator:
+    """Generates responses using Llama 3 via Ollama."""
+
+    def generate_response(self, query, relevant_chunks):
+        """Generate a response using Llama 3."""
+        try:
+            context = "\n\n".join([chunk.page_content for chunk in relevant_chunks])
+            prompt = (
+                f"You are a helpful assistant. Use the following context to answer the question.\n"
+                f"Context:\n{context}\n\n"
+                f"Question: {query}\n"
+                f"Answer:"
+            )
+            logging.info("Generating response with Llama 3...")
+            response = ollama.generate(model="llama3.2", prompt=prompt)
+            return response["response"]
+        except Exception as e:
+            logging.error(f"Error generating response with Llama 3: {e}")
+            return None
+
+class RAGPipeline:
+    """Orchestrates the RAG pipeline."""
+
+    def __init__(self, pdf_path=None, persist_directory="my_chroma_db", chunk_size=1000, chunk_overlap=200):
+        self.pdf_path = pdf_path
+        self.persist_directory = persist_directory
+        self.chunk_size = chunk_size
+        self.chunk_overlap = chunk_overlap
+        self.pdf_processor = PDFProcessor(chunk_size, chunk_overlap)
+        self.chroma_manager = ChromaDBManager(persist_directory)
+        self.llm_generator = LLMResponseGenerator()
+
+    def run(self):
+        """Run the RAG pipeline."""
+        if self.pdf_path:
+            texts = self.pdf_processor.split_pdf_to_text(self.pdf_path)
+            if not texts:
+                logging.error("Failed to load or split the PDF. Exiting.")
+                return
+
+            if not self.chroma_manager.store_in_chromadb(texts):
+                logging.error("Failed to store chunks in ChromaDB. Exiting.")
+                return
+
+        logging.info("Starting RAG pipeline with ChromaDB and Llama 3.")
+        while True:
+            query = input("\nYou: ")
+            if query.lower() in ["exit", "quit"]:
+                logging.info("Exiting the RAG pipeline.")
+                break
+
+            relevant_chunks = self.chroma_manager.query_chromadb(query)
+            if not relevant_chunks:
+                print("No relevant chunks found. Try a different query.")
+                continue
+
+            response = self.llm_generator.generate_response(query, relevant_chunks)
+            if response:
+                print(f"Assistant: {response}")
+            else:
+                print("Failed to generate a response. Please try again.")
+
+def main():
+    """Parse command-line arguments and run the RAG pipeline."""
     parser = argparse.ArgumentParser(description="Embed a PDF into ChromaDB and query it with Llama 3.")
     parser.add_argument("--pdf_path", help="Path to the PDF file (optional)", default=None)
     parser.add_argument("--persist_directory", help="Directory to store ChromaDB", default="my_chroma_db")
@@ -159,5 +150,8 @@ if __name__ == "__main__":
     parser.add_argument("--chunk_overlap", type=int, help="Overlap between chunks", default=200)
     args = parser.parse_args()
 
-    # Run the pipeline
-    main(args.pdf_path, args.persist_directory, args.chunk_size, args.chunk_overlap)
+    pipeline = RAGPipeline(args.pdf_path, args.persist_directory, args.chunk_size, args.chunk_overlap)
+    pipeline.run()
+
+if __name__ == "__main__":
+    main()
