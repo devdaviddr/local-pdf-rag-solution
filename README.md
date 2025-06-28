@@ -12,6 +12,54 @@ This solution is ideal for building **local, privacy-preserving question-answeri
 
 ---
 
+## **Quick Start**
+
+🚀 **Get started in under 2 minutes:**
+
+1. **Clone and setup**:
+   ```bash
+   git clone https://github.com/devdaviddr/local-pdf-rag-solution
+   cd local-pdf-rag-solution
+   ./setup.sh
+   ```
+
+2. **Add your PDFs**:
+   ```bash
+   cp /path/to/your/*.pdf source_pdf/
+   ```
+
+3. **Run the application**:
+   ```bash
+   ./run.sh  # For subsequent runs
+   ```
+
+### **Automated Setup Scripts**
+
+This project includes two powerful automation scripts:
+
+#### **`setup.sh` - Complete Environment Setup**
+- ✅ Creates Python virtual environment (`venv`)
+- ✅ Installs all dependencies from `requirements.txt`
+- ✅ Validates system prerequisites (Python 3, required files)
+- ✅ Creates `source_pdf` directory if it doesn't exist
+- ✅ Checks for PDF files and starts the application automatically
+- ✅ Provides colored output with progress indicators
+- ✅ Handles errors gracefully with informative messages
+
+#### **`run.sh` - Quick Application Launcher**
+- ✅ Activates the existing virtual environment
+- ✅ Validates the setup before starting
+- ✅ Runs the application with default settings
+- ✅ Perfect for daily use after initial setup
+
+**Why use the scripts?**
+- **Consistent environment**: No more "works on my machine" issues
+- **Error prevention**: Automatic validation of prerequisites
+- **Time-saving**: One command does everything
+- **Beginner-friendly**: No need to remember complex commands
+
+---
+
 ## **Key Features**
 - **PDF Processing**:
   - Loads PDFs from a specified directory and splits them into smaller text chunks using `RecursiveCharacterTextSplitter`.
@@ -42,76 +90,523 @@ This solution is ideal for building **local, privacy-preserving question-answeri
 ## **Getting Started**
 
 ### **Prerequisites**
-- Python 3.8+
-- Ollama installed and running locally (for Llama 3).
+- **Python 3.8+** installed on your system
+- **Ollama** installed and running locally (for Llama 3)
+  - Install Ollama from [https://ollama.ai/](https://ollama.ai/)
+  - Pull the Llama 3.2 model: `ollama pull llama3.2`
+- **Git** for cloning the repository
+- At least **2GB of free disk space** for models and vector database
 
 ### **Installation**
-1. Clone the repository:
+
+#### **Quick Start (Recommended)**
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/devdaviddr/local-pdf-rag-solution
-   cd local-pdf-rag
-   ```
-2. Install the dependencies:
-   ```bash
-   pip install langchain chromadb sentence-transformers ollama
+   cd local-pdf-rag-solution
    ```
 
+2. **One-command setup**:
+   ```bash
+   # Run automated setup script - creates venv, installs dependencies, and starts the app
+   ./setup.sh
+   ```
+   
+   The setup script will:
+   - ✅ Create a Python virtual environment (`venv`)
+   - ✅ Install all dependencies from `requirements.txt`
+   - ✅ Check for PDF files in `source_pdf` directory
+   - ✅ Automatically start the application
+
+3. **For subsequent runs** (after initial setup):
+   ```bash
+   # Quick run script for future sessions
+   ./run.sh
+   ```
+
+#### **Manual Setup (Alternative)**
+If you prefer manual control or encounter issues with the automated setup:
+
+```bash
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the application
+python app.py --data_directory source_pdf
+```
+
+#### **Verify Ollama and Llama 3.2 Installation**
+```bash
+# Check if Ollama is running
+ollama list
+
+# If Llama 3.2 is not installed, pull it
+ollama pull llama3.2
+
+# Test the model
+ollama run llama3.2 "Hello, how are you?"
+```
+
 ### **Usage**
-1. **Embed PDFs and Query**:
-   ```bash
-   python app.py --data_directory pdfs --persist_directory my_chroma_db
-   ```
-2. **Query an Existing ChromaDB**:
-   ```bash
-   python app.py --persist_directory my_chroma_db
-   ```
-3. **Reindex ChromaDB**:
-   ```bash
-   python app.py --data_directory pdfs --persist_directory my_chroma_db --reindex
-   ```
-4. **Interact with the Assistant**:
-   - Enter your query at the prompt.
-   - Type `exit` or `quit` to end the session.
+
+#### **Step 1: Prepare Your PDFs**
+The setup script automatically creates a `source_pdf` directory. Place your PDF files there:
+```bash
+# Copy your PDF files to the source_pdf directory
+cp /path/to/your/*.pdf source_pdf/
+```
+
+#### **Step 2: Run the Application**
+
+**First-time setup:**
+```bash
+# Complete setup and start the application
+./setup.sh
+```
+
+**Subsequent runs:**
+```bash
+# Quick start for already configured environment
+./run.sh
+```
+
+**Manual execution (if needed):**
+```bash
+# Activate virtual environment and run manually
+source venv/bin/activate
+python app.py --data_directory source_pdf
+```
+
+#### **Step 3: Interactive Querying**
+Once the app is running, you can:
+- **Ask questions** about your documents
+- **Request summaries** of specific topics
+- **Search for specific information**
+- **Type `exit` or `quit`** to end the session
+
+#### **Common Query Examples**
+```
+You: Summarize the key findings in the research paper
+You: What are the main conclusions?
+You: Explain the methodology used in the study
+You: What are the limitations mentioned?
+You: List the references cited
+You: exit
+```
+
+#### **Script Features**
+Both `setup.sh` and `run.sh` include:
+- ✅ **Colored output** for better readability
+- ✅ **Error handling** with informative messages
+- ✅ **Prerequisite checks** (Python, files, PDFs)
+- ✅ **Automatic cleanup** of old environments
+- ✅ **Progress indicators** throughout the process
 
 ---
 
-## **Example**
+## **Advanced Configuration and Troubleshooting**
+
+### **Command Line Arguments**
+The app supports several command-line arguments for customization:
+
+| Argument | Description | Default | Example |
+|----------|-------------|---------|---------|
+| `--data_directory` | Directory containing PDF files | `source_pdf` | `--data_directory custom_pdfs` |
+| `--persist_directory` | Directory to store ChromaDB | `my_chroma_db` | `--persist_directory custom_db` |
+| `--chunk_size` | Size of each text chunk | `1000` | `--chunk_size 500` |
+| `--chunk_overlap` | Overlap between chunks | `200` | `--chunk_overlap 100` |
+| `--reindex` | Reindex the ChromaDB collection | False | `--reindex` |
+
+**Advanced Usage Examples:**
 ```bash
-You: What is the main topic of the document?
-Assistant: The main topic of the document is...
+# Custom chunk settings for better context
+source venv/bin/activate
+python app.py --data_directory source_pdf --chunk_size 1500 --chunk_overlap 300
+
+# Use different directories
+python app.py --data_directory research_papers --persist_directory research_db
+
+# Rebuild the entire database
+python app.py --data_directory source_pdf --reindex
+```
+
+### **Performance Tuning**
+- **For large documents**: Increase `chunk_size` to 1500-2000
+- **For better context**: Increase `chunk_overlap` to 300-400
+- **For faster processing**: Decrease `chunk_size` to 500-800
+- **For more precise answers**: Decrease `chunk_size` to 300-500
+
+### **Troubleshooting**
+
+#### **Common Issues and Solutions**
+
+**1. "No module named 'ollama'" error**
+```bash
+# If using automated setup, try running setup.sh again
+./setup.sh
+
+# Or activate the virtual environment manually
+source venv/bin/activate
+pip install ollama
+```
+
+**2. "Connection refused" when querying Llama**
+```bash
+# Start Ollama service
+ollama serve
+# In another terminal, test the connection
+ollama run llama3.2 "test"
+```
+
+**3. "No such file or directory" for PDFs**
+```bash
+# Check if your source_pdf directory exists and contains PDF files
+ls -la source_pdf/
+# Ensure PDFs are readable
+file source_pdf/*.pdf
+```
+
+**4. Setup script fails**
+```bash
+# Make sure the script is executable
+chmod +x setup.sh run.sh
+
+# Check Python 3 installation
+python3 --version
+
+# Run setup with verbose output
+bash -x setup.sh
+```
+
+**4. ChromaDB permission errors**
+```bash
+# Check directory permissions
+ls -la my_chroma_db/
+# Fix permissions if needed
+chmod -R 755 my_chroma_db/
+```
+
+**5. Out of memory errors**
+```bash
+# Reduce chunk size and try again
+source venv/bin/activate
+python app.py --data_directory source_pdf --chunk_size 500
+```
+
+**6. Virtual environment issues**
+```bash
+# Remove and recreate the environment
+rm -rf venv
+./setup.sh
+```
+
+#### **Debugging Tools**
+
+**Inspect ChromaDB Collection**:
+```bash
+source venv/bin/activate
+python chroma_cli.py --persist_directory my_chroma_db
+```
+
+**Check Ollama Models**:
+```bash
+ollama list
+ollama show llama3.2
+```
+
+**Verify Python Environment**:
+```bash
+source venv/bin/activate
+python --version
+pip list | grep -E "(langchain|chromadb|ollama)"
+```
+
+**Check Script Status**:
+```bash
+# Test if scripts are executable
+ls -la *.sh
+
+# View script output with debugging
+bash -x setup.sh
+```
+
+### **Best Practices**
+1. **Start small**: Test with 1-2 PDFs before processing large collections
+2. **Backup your ChromaDB**: Copy the persist directory before reindexing
+3. **Monitor resources**: Large PDF collections can use significant disk space
+4. **Use meaningful directory names**: Name your persist directories descriptively
+5. **Regular maintenance**: Periodically reindex if you frequently update documents
+
+---
+
+## **Example Workflows**
+
+### **Workflow 1: Research Paper Analysis**
+```bash
+# 1. Create directory for research papers (or use source_pdf)
+mkdir research_papers
+cp *.pdf research_papers/
+
+# 2. Process papers using custom directory
+source venv/bin/activate
+python app.py --data_directory research_papers --persist_directory research_db
+
+# 3. Query examples
+You: What are the main research questions addressed?
+You: Summarize the methodology section
+You: What are the key findings?
+```
+
+### **Workflow 2: Quick Start with Default Setup**
+```bash
+# 1. Copy PDFs to default directory
+cp /path/to/documents/*.pdf source_pdf/
+
+# 2. Run automated setup
+./setup.sh
+
+# 3. For future sessions
+./run.sh
+```
+
+### **Workflow 2: Document Library Management**
+```bash
+# 1. Initial setup with existing documents
+./setup.sh  # Uses source_pdf directory by default
+
+# 2. Later, add new documents to a different collection
+source venv/bin/activate
+python app.py --data_directory new_documents --persist_directory doc_library
+
+# 3. Query the combined library
+python app.py --persist_directory doc_library
+```
+
+### **Workflow 3: Personal Knowledge Base**
+```bash
+# 1. Organize documents by topic
+mkdir -p knowledge_base/{tech,finance,health}
+
+# 2. Process each category separately
+source venv/bin/activate
+python app.py --data_directory knowledge_base/tech --persist_directory kb_tech
+python app.py --data_directory knowledge_base/finance --persist_directory kb_finance
+
+# 3. Query specific domains
+python app.py --persist_directory kb_tech
 ```
 
 ---
 
-## **Customization**
-- **Chunk Size and Overlap**:
-  - Adjust the `--chunk_size` and `--chunk_overlap` arguments to control how the PDF is split.
-  ```bash
-  python app.py --data_directory pdfs --chunk_size 500 --chunk_overlap 100
-  ```
-- **Number of Chunks**:
-  - Modify the `k` parameter in `query_chromadb` to retrieve more or fewer chunks.
-- **Persist Directory**:
-  - Specify a custom directory for ChromaDB data using the `--persist_directory` argument.
-  ```bash
-  python app.py --data_directory pdfs --persist_directory custom_chroma_db
-  ```
+## **Utilities and Tools**
+
+### **ChromaDB CLI (`chroma_cli.py`)**
+The project includes a utility tool for inspecting and debugging your ChromaDB collections.
+
+#### **Purpose:**
+- **Database Inspection**: View all documents and metadata stored in your ChromaDB collection
+- **Debugging Aid**: Verify that PDFs were properly processed and stored
+- **Data Exploration**: Understand what text chunks exist in your vector database
+- **Quality Control**: Ensure text chunks are meaningful and metadata is preserved
+
+#### **Usage:**
+```bash
+# Inspect your ChromaDB collection
+source venv/bin/activate
+python chroma_cli.py --persist_directory my_chroma_db
+```
+
+#### **Example Output:**
+```
+ChromaDB Schema and Metadata:
+Document 1:
+Text: This is a chunk of text from page 1 of document.pdf...
+Metadata: {'source': '/path/to/document.pdf', 'page': 1}
+--------------------------------------------------
+Document 2:
+Text: Another chunk of text from the same document...
+Metadata: {'source': '/path/to/document.pdf', 'page': 1}
+--------------------------------------------------
+```
+
+#### **When to Use:**
+- After processing PDFs to verify successful ingestion
+- Before querying to understand what data is available
+- When troubleshooting retrieval issues
+- To validate chunk size and overlap settings
 
 ---
 
-## **Code Structure**
-- **PDFProcessor**: Handles loading and splitting PDFs into text chunks.
-- **ChromaDBManager**: Manages ChromaDB operations like storing, querying, and reindexing.
-- **LLMResponseGenerator**: Generates responses using Llama 3 via Ollama.
-- **RAGPipeline**: Orchestrates the RAG pipeline, including PDF processing, ChromaDB management, and response generation.
+---
+
+## **Customization**
+
+### **Chunk Size and Overlap Optimization**
+The text chunking strategy significantly affects answer quality:
+
+```bash
+# For technical documents (more context needed)
+python app/app.py --data_directory pdfs --chunk_size 1500 --chunk_overlap 300
+
+# For general documents (balanced approach)
+python app/app.py --data_directory pdfs --chunk_size 1000 --chunk_overlap 200
+
+# For quick processing (less context, faster)
+python app/app.py --data_directory pdfs --chunk_size 500 --chunk_overlap 100
+```
+
+### **Retrieval Configuration**
+Modify the number of chunks retrieved for each query by editing the `k` parameter in the `query_chromadb` method in `app.py`:
+
+```python
+# In ChromaDBManager.query_chromadb method
+results = db.similarity_search(query, k=10)  # Retrieve more chunks for better context
+```
+
+### **Custom Persist Directories**
+Organize different document collections:
+
+```bash
+# Legal documents
+python app/app.py --data_directory legal_docs --persist_directory legal_db
+
+# Technical manuals  
+python app/app.py --data_directory manuals --persist_directory technical_db
+
+# Academic papers
+python app/app.py --data_directory papers --persist_directory academic_db
+```
+
+### **Environment Variables**
+You can set default values using environment variables:
+
+```bash
+export PDF_DATA_DIR="./pdfs"
+export CHROMA_PERSIST_DIR="./my_chroma_db"
+export CHUNK_SIZE=1000
+export CHUNK_OVERLAP=200
+```
+
+---
+
+---
+
+## **Technical Architecture**
+
+### **Code Structure**
+The application follows a modular design pattern:
+
+- **`PDFProcessor`**: Handles loading and splitting PDFs into text chunks with metadata preservation
+- **`ChromaDBManager`**: Manages all ChromaDB operations including storage, querying, and reindexing
+- **`LLMResponseGenerator`**: Interfaces with Ollama to generate responses using Llama 3.2
+- **`RAGPipeline`**: Orchestrates the entire pipeline, coordinating between components
+
+### **Data Flow**
+1. **Ingestion**: PDFs → Text Chunks → Embeddings → ChromaDB
+2. **Retrieval**: User Query → Similarity Search → Relevant Chunks
+3. **Generation**: Relevant Chunks + Query → Llama 3.2 → Response
+
+### **Storage Structure**
+```
+my_chroma_db/
+├── chroma.sqlite3          # ChromaDB database
+├── index/                  # Vector indices
+└── logs/                   # Operation logs
+```
+
+### **Supported File Types**
+- **Primary**: PDF files (.pdf)
+- **Future**: The architecture supports extending to other document types
+
+### **Memory and Performance**
+- **RAM Usage**: ~2-4GB for typical document collections
+- **Disk Usage**: ~10-50MB per 100 pages of PDFs
+- **Processing Speed**: ~1-5 seconds per page depending on content complexity
+
+---
 
 ---
 
 ## **Dependencies**
-- **[LangChain](https://www.langchain.com/)**: For document loading, text splitting, and vector storage.
-- **[ChromaDB](https://www.chromadb.com/)**: For storing and retrieving embeddings.
-- **[Hugging Face Embeddings](https://huggingface.co/)**: For generating embeddings.
-- **[Ollama](https://ollama.ai/)**: For running Llama 3 locally.
+
+### **Core Dependencies**
+- **[LangChain](https://www.langchain.com/)**: Framework for document loading, text splitting, and vector storage
+- **[ChromaDB](https://www.chromadb.com/)**: Vector database for storing and retrieving embeddings
+- **[Hugging Face Transformers](https://huggingface.co/)**: For generating text embeddings (all-MiniLM-L6-v2 model)
+- **[Ollama](https://ollama.ai/)**: For running Llama 3.2 locally
+- **[PyPDF](https://pypdf.readthedocs.io/)**: For PDF text extraction
+
+### **System Requirements**
+- **Operating System**: macOS, Linux, Windows (WSL recommended)
+- **Python**: 3.8 or higher
+- **Memory**: Minimum 4GB RAM, 8GB recommended
+- **Storage**: 2GB free space for models and databases
+- **Network**: Internet connection for initial model downloads
+
+### **Model Information**
+- **Embedding Model**: `all-MiniLM-L6-v2` (384 dimensions, ~90MB)
+- **Language Model**: `llama3.2` (varies by size: 1B, 3B, or 8B parameters)
+- **Download Time**: 5-30 minutes depending on model size and connection speed
+
+---
+
+## **Frequently Asked Questions (FAQ)**
+
+### **Q: How many PDFs can I process at once?**
+A: The system can handle hundreds of PDFs, limited mainly by available disk space and memory. Start with 10-20 documents for testing.
+
+### **Q: Can I use a different language model?**
+A: Yes! Modify the `model` parameter in the `LLMResponseGenerator.generate_response()` method. Ensure the model is available in Ollama:
+```bash
+ollama pull mistral  # Example alternative model
+```
+
+### **Q: How do I improve answer accuracy?**
+A: Try these approaches:
+- Increase `chunk_overlap` for better context continuity
+- Adjust `k` parameter to retrieve more relevant chunks
+- Use more specific queries
+- Ensure your PDFs have good text quality (not just scanned images)
+
+### **Q: Can I use this with scanned PDFs?**
+A: This version works with text-based PDFs. For scanned PDFs, you'll need OCR preprocessing. Consider using tools like Tesseract or Adobe Acrobat to convert scanned PDFs to text-searchable format first.
+
+### **Q: Is my data secure?**
+A: Yes! Everything runs locally on your machine. No data is sent to external servers. Your documents and queries remain completely private.
+
+### **Q: How do I back up my vector database?**
+A: Simply copy the entire persist directory:
+```bash
+cp -r my_chroma_db my_chroma_db_backup
+```
+
+### **Q: Can I run this on a server?**
+A: Yes! The application can run on servers. For remote access, you might want to add a web interface using Streamlit or Flask.
+
+---
+
+## **Roadmap and Future Enhancements**
+
+### **Planned Features**
+- [ ] **Web Interface**: Streamlit or Gradio UI for easier interaction
+- [ ] **Multi-format Support**: Word documents, PowerPoint, text files
+- [ ] **OCR Integration**: Support for scanned PDFs and images
+- [ ] **Advanced Search**: Boolean operators, date filtering, source filtering
+- [ ] **Export Features**: Save conversations, export chunks, generate reports
+- [ ] **Multi-language Support**: Documents in languages other than English
+- [ ] **Cloud Deployment**: Docker containers and cloud deployment guides
+
+### **Community Contributions Welcome**
+We encourage contributions in these areas:
+- UI improvements and web interfaces
+- Support for additional document formats
+- Performance optimizations
+- Documentation translations
+- Example use cases and tutorials
 
 ---
 
